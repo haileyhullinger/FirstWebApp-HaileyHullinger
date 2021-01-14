@@ -1,0 +1,32 @@
+﻿body {
+
+    font-family : "Trebuchet MS";
+}
+#image{
+    text-align : center;
+}
+
+#name {
+    text-align: center;
+    color: mediumpurple;
+}
+
+label {
+    font-size: 20px;
+    color: mediumpurple;
+    width: 200px;
+    display: inline-block
+}
+
+#calcButton {
+    border-radius: 50%;
+    background-color: #555555;
+    color: white;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
