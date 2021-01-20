@@ -1,17 +1,22 @@
-﻿var submit = document.getElementById("calcButton");
+﻿//becasue we are using jquery, we use the $ in place of the document.getElementById method
 
-submit.addEventListener("click", function () {
+//removed during the adding jquery process 
+//var submit = document.getElementById("calcButton");
+//submit.addEventListener("click", function () {
+
+$("#calcButton").click(function () {
+
 
     //assignemnts are 50 percent of the grade
-    var assignments = (parseInt(document.getElementById("assignments").value)) * .50;
+    var assignments = (parseInt($("assignments").value)) * .50;
     //group projects are 10 percent of the grade
-    var group = (parseInt(document.getElementById("group").value)) * .10;
+    var group = (parseInt(document.$("group").value)) * .10;
     //quizzes are 10 percent of the grade
-    var quizzes = (parseInt(document.getElementById("quizzes").value)) * .10;
+    var quizzes = (parseInt(document.$("quizzes").value)) * .10;
     //exams are 20 percent of the grade
-    var exams = (parseInt(document.getElementById("exams").value)) * .20;
+    var exams = (parseInt(document.$("exams").value)) * .20;
     //intex is 10 percent of the grade
-    var intex = (parseInt(document.getElementById("intex").value)) * .10;
+    var intex = (parseInt(document.$("intex").value)) * .10;
 
     var finalGrade = assignments + group + quizzes + exams + intex;
     var letterGrade = '';

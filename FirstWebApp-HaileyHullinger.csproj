@@ -6,7 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\index.html" />
+    <PackageReference Include="OdeToCode.UseNodeModules" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
