@@ -22,20 +22,27 @@ namespace FirstWebApp_HaileyHullinger
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //error handling
+            if (env.IsEnvironment("Development"))
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                //add error page
+            }
+
             app.UseNodeModules();
-
             //app.UseDefaultFiles(); taken out in mvc conversion
-
             app.UseStaticFiles();
 
             //added during mvc conversion
             app.UseRouting();
-
             app.UseEndpoints(cfg =>
             {
                 cfg.MapControllerRoute("Default",
                     "{controller}/{action}/{id?}",
-                    new { controller = "HomeController", action = "Index" });
+                    new { controller = "Home", action = "Index" });
             }
             );
 

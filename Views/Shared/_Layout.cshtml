@@ -1,0 +1,40 @@
+﻿<!--This is the shared layout page. All pages will have this as a shared layout-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Name</title>
+    <!--css style sheet-->
+    <link href="~/css/main.css" rel="stylesheet" />
+    <!--icon-->
+    <link rel="icon" type="image/png" href="~/img/icon.png" />
+</head>
+<body>
+    <header>
+        <h3 id="name">@ViewBag.Title</h3>
+
+        <br />
+
+        <!--navigation links, links to _ViewImports.cshtml-->
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-Controller="Home" asp-action="Grade">Grade Calculation</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <!--Tells this layout page where to enter the extra stuff from the Index.cshtml page add ons-->
+    @RenderBody()
+
+    <footer>Student of Information Systems</footer>
+
+
+    <!--link to jquery file in the npm-->
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!--link to javascript-->
+    <script src="~/js/grade.js"></script>
+</body>
+</html>

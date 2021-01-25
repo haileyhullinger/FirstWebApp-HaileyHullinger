@@ -5,18 +5,16 @@
 //submit.addEventListener("click", function () {
 
 $("#calcButton").click(function () {
-
-
     //assignemnts are 50 percent of the grade
-    var assignments = (parseInt($("assignments").value)) * .50;
+    var assignments = parseInt($("#assignments").val()) * .50;
     //group projects are 10 percent of the grade
-    var group = (parseInt(document.$("group").value)) * .10;
+    var group = parseInt($("#group").val()) * .10;
     //quizzes are 10 percent of the grade
-    var quizzes = (parseInt(document.$("quizzes").value)) * .10;
+    var quizzes = parseInt($("#quizzes").val()) * .10;
     //exams are 20 percent of the grade
-    var exams = (parseInt(document.$("exams").value)) * .20;
+    var exams = parseInt($("#exams").val()) * .20;
     //intex is 10 percent of the grade
-    var intex = (parseInt(document.$("intex").value)) * .10;
+    var intex = parseInt($("#intex").val()) * .10;
 
     var finalGrade = assignments + group + quizzes + exams + intex;
     var letterGrade = '';
@@ -64,5 +62,6 @@ $("#calcButton").click(function () {
 
     //display the letter grade and percentage points
     alert("Your final grade is " + letterGrade + " with " + finalGrade + "%");
+
 
 });
